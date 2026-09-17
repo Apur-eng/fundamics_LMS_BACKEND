@@ -1,20 +1,37 @@
-# Contributing to Coaching LMS
+# Contributing to Fundamics LMS Backend
 
-Thank you for your interest in contributing to Coaching LMS!
+Guidelines and conventions for contributing to the LMS backend codebase.
 
-## Code of Conduct
+## Branching Strategy
 
-Please maintain a professional and respectful environment when interacting with this repository and fellow contributors.
+- `main`: Production-ready, stable branch.
+- `dev` / `develop`: Integration branch for ongoing development.
+- Feature branches: `feat/<feature-name>`
+- Bugfix branches: `fix/<bug-name>`
+- Chore/Refactor branches: `chore/<description>` or `refactor/<description>`
 
-## Workflow & Development Process
+## Commit Message Conventions
 
-1. **Branching Strategy**:
-   - Create feature or fix branches from `main` or `develop` using standard naming conventions (e.g., `feature/xyz`, `bugfix/abc`).
-2. **Documentation**:
-   - Update relevant documentation in the `docs/` directory alongside code changes.
-   - Record significant architectural choices in `docs/decisions/`.
-3. **Commit Messages**:
-   - Use clear, descriptive commit messages following the Conventional Commits specification (e.g., `feat: ...`, `fix: ...`, `docs: ...`).
-4. **Pull Requests**:
-   - Provide a concise summary of changes and reference relevant issues.
-   - Ensure all automated checks and tests pass before requesting review.
+Follow the Conventional Commits format:
+```
+<type>(<optional scope>): <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+Common types:
+- `feat`: A new feature or API endpoint
+- `fix`: A bug fix
+- `docs`: Documentation updates
+- `refactor`: Code change that neither fixes a bug nor adds a feature
+- `test`: Adding or correcting tests
+- `chore`: Build tasks, dependency updates, configuration changes
+
+## Pull Request Process
+
+1. Ensure existing and new tests pass locally.
+2. Adhere to code style and linting standards.
+3. Update relevant API specifications or architecture docs in `docs/` when introducing changes.
+4. Keep pull requests focused on a single topic or feature.

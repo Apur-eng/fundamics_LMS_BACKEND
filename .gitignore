@@ -2,26 +2,40 @@
 node_modules/
 .pnp
 .pnp.js
+vendor/
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+ENV/
 
 # Environment Variables & Secrets
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.*
+!.env.example
 *.pem
 *.key
+*.cert
+*.crt
 
-# Build outputs & caches
+# Build Outputs & Binaries
 dist/
 build/
 out/
-.next/
-.turbo/
-.cache/
+target/
+bin/
+*.exe
+*.dll
+*.so
+*.dylib
 *.tsbuildinfo
+*.class
+*.jar
+*.war
 
-# Logs
+# Logs & Debugging
 logs/
 *.log
 npm-debug.log*
@@ -29,11 +43,21 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+# Database & Persistent Storage
+*.db
+*.sqlite
+*.sqlite3
+data/
+uploads/
+
 # Testing & Coverage
 coverage/
 .nyc_output/
+.coverage
+htmlcov/
+*.lcov
 
-# IDE & Editor files
+# IDE & Editor Files
 .vscode/*
 !.vscode/extensions.json
 !.vscode/settings.json
@@ -44,7 +68,7 @@ coverage/
 *.sln
 *.sw?
 
-# OS Generated files
+# OS Generated Files
 .DS_Store
 .DS_Store?
 ._*
